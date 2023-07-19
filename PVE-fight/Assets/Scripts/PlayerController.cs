@@ -24,20 +24,20 @@ public class PlayerController : MonoBehaviour
         {
 
             rb.velocity = new Vector2(-velocitySpeed, rb.velocity.y);
-            animator.SetBool("Run", true);
+            //animator.SetBool("Run", true);
             spriteRenderer.flipX = true;
 
         }
         else if (Input.GetKey("d"))
         {
             rb.velocity = new Vector2(velocitySpeed, rb.velocity.y);
-            animator.SetBool("Run", true);
+            //animator.SetBool("Run", true);
             spriteRenderer.flipX = false;
         }
         else
         {
             rb.velocity = new Vector2(0, rb.velocity.y);
-            animator.SetBool("Run", false);
+            //animator.SetBool("Run", false);
         }
         
         if (Input.GetKey("w") && OnGround.onGround)
