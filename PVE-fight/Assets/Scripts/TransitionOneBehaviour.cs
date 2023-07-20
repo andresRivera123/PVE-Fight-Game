@@ -13,7 +13,7 @@ public class TransitionOneBehaviour : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (CombatManager.instance.isAttacking)
+        if (CombatManager.instance.isAttacking && OnGround.onGround)
         {
             CombatManager.instance.animator.Play("Attack2");
         }
